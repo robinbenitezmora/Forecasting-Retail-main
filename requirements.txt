@@ -12,6 +12,7 @@ sqlalchemy==2.0.36
 # Machine Learning
 scikit-learn==1.5.2
 category_encoders==2.6.4
+xgboost==2.1.2
 
 # Environment & Utilities
 python-dotenv==1.0.1
