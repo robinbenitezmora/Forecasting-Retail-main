@@ -26,3 +26,7 @@ ipykernel==6.29.5
 
 # Additional Utilities
 requests==2.32.3
+
+# Requerido por los hooks de Claude Code (~/.claude/hooks/md_convert.py),
+# que se ejecutan con el python de este entorno. No lo quites.
+markitdown==0.1.6

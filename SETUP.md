@@ -19,10 +19,24 @@
 - `openpyxl==3.1.5` - Lectura/escritura de Excel
 - `sqlalchemy==2.0.36` - ORM y conexiones SQL
 
+### Machine Learning
+- `scikit-learn==1.5.2` - Modelado, pipelines y validación temporal
+- `category_encoders==2.6.4` - Target encoding de variables categóricas
+- `xgboost==2.1.2` - Gradient boosting
+
 ### Utilidades
 - `python-dotenv==1.0.1` - Variables de entorno
 - `pandas-flavor==0.8.1` - Decoradores para pandas
 - `requests==2.32.3` - Solicitudes HTTP
+
+### Herramientas Externas (no usadas por el proyecto)
+- `markitdown==0.1.6` - Conversión de documentos a Markdown
+
+> ⚠️ **No eliminar `markitdown`.** No lo usa el código del proyecto, pero los hooks
+> de Claude Code (`~/.claude/hooks/md_convert.py` y `aviso_modelo.py`) están
+> configurados para ejecutarse con el Python de **este** entorno. Si se recrea el
+> entorno sin `markitdown`, se rompe la conversión automática de documentos en
+> todos los proyectos, no solo en este.
 
 ### Jupyter & Notebooks
 - `jupyter==1.1.1` - Interfaz Jupyter
@@ -67,7 +81,7 @@ pip install nombre-paquete
 
 Desde una terminal con el entorno activo:
 ```bash
-python -c "import janitor; import pandas; print('✅ Todo funciona correctamente')"
+python -c "import janitor, pandas, markitdown; print('✅ Todo funciona correctamente')"
 ```
 
 ## Solucionar Problemas
